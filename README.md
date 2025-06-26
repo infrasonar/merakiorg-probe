@@ -1,7 +1,7 @@
 [![CI](https://github.com/infrasonar/merakiorg-probe/workflows/CI/badge.svg)](https://github.com/infrasonar/merakiorg-probe/actions)
 [![Release Version](https://img.shields.io/github/release/infrasonar/merakiorg-probe)](https://github.com/infrasonar/merakiorg-probe/releases)
 
-# InfraSonar Meraki Probe
+# InfraSonar Meraki Organization Probe
 
 Documentation: https://docs.infrasonar.com/collectors/probes/meraki/
 
@@ -39,19 +39,23 @@ docker build -t merakiorg-probe . --no-cache
 ## Dry run
 
 Available checks:
-- `organizations`
+- `organization`
+- `wireless`
 
 Create a yaml file, for example _(test.yaml)_:
 
 ```yaml
 asset:
   name: "Meraki"
-  check: "organizations"
+  check: "wireless"
+  config:
+    id: "123456"
 ```
+
+> Note: `id` is the Organization ID
 
 Run the probe with the `DRY_RUN` environment variable set the the yaml file above.
 
 ```
 DRY_RUN=test.yaml python main.py
 ```
-# merakiorg-probe
