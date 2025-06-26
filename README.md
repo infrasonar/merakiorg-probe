@@ -46,7 +46,7 @@ Create a yaml file, for example _(test.yaml)_:
 
 ```yaml
 asset:
-  name: "Meraki"
+  name: "MerakiOrganization"
   check: "wireless"
   config:
     id: "123456"
