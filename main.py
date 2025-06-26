@@ -10,6 +10,6 @@ if __name__ == '__main__':
         'wireless': check_wireless,
     }
 
-    probe = Probe("meraki", version, checks)
+    probe = Probe("merakiorg", version, checks)
 
     probe.start()

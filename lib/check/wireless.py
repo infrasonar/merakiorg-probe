@@ -40,6 +40,7 @@ async def check_wireless(
             "deviceName": device['name'],  # str
             "mac": device['mac'],  # str
             "networkId": device['networkId'],  # str
+            "organizationId": org_id,
             # "productType": device['productType'],  # str
             # "model": device['model'],  # str
             # "address": device.get('address') or None,  # str?
