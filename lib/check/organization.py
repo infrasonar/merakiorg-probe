@@ -17,7 +17,7 @@ class CheckOrganization(Check):
                 'Missing organization ID in asset collector configuration')
 
         req = f'/organizations/{org_id}'
-        resp = await query(asset, local_config, config, req)
+        resp = await query(local_config, req)
 
         licensing_model = resp.get('licensing', {}).get('model')
         cloud_region = resp.get('cloud', {}).get('region', {}).get('name')

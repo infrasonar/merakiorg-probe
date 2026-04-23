@@ -17,7 +17,7 @@ class CheckWireless(Check):
                 'Missing organization ID in asset collector configuration')
 
         req = f'/organizations/{org_id}/devices?productTypes[]=wireless'
-        resp = await query(asset, local_config, config, req)
+        resp = await query(local_config, req)
 
         items: list[dict[str, Any]] = []
         for device in resp:
